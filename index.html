@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Canvas & Mootools</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body align = "center">
+	<input class = "buttonns" type = "button" value = "Новая игра" onclick="new_game()">
+	<input class = "buttonns" type = "button" value = "Пауза" onclick="pausa()">
+	<input class = "buttonns" type = "button" value = "Показать таблицу результатов" onclick="onclick_show_table()">
+	<input class = "buttonns" type = "button" value = "Сменить игрока" onclick="swap_player()">
+	<br>
+<form id = "form">
+	<div class = "Progress">
+		<div id = "HP"></div>
+	</div>
+	<div class = "Progress">
+		<div id = "fire_bar"></div>
+	</div>
+
+	<span id = "level">level 1</span>
+	<span id = "wave">Волна 1</span>
+	<span id = "PlayerName"></span>
+	
+</form>
+	
+	<div class = "ramka-5">
+		<canvas id="canvas" ></canvas>
+	</div><br>
+	
+	<div id ="BOSS_Progress">
+		<div id = "BOSS"></div>
+	</div>
+
+	<div class = "Progress" style="width: 100%;">
+		<div id = "EXP"></div>
+	</div><br>
+
+	<br>
+	<script type="text/javascript" src="interface.js"></script>
+	<script type="text/javascript" src="plane.js"></script>
+	<script type="text/javascript" src="colis.js"></script>
+	<script type="text/javascript" src="enemies.js"></script>
+	<script type="text/javascript" src="fire.js"></script>
+	<script type="text/javascript" src="lavel.js"></script>
+	<script type="text/javascript" src="mouse.js"></script>
+	<script type="text/javascript" src="backFon.js"></script>
+
+</body>
+</html>
+
+<!-- //добавил интерфес покрасивее
+//распределил враго в уровень сложности 1 ур просто летят вперед 1 хр
+//2 ур вверх вниз 1 хр 3 ур вверх вниз 2 хр 
+//изменение типов патрон при достижении определенного опыта
+//босс в конце 3 уровня летает вверх вниз и стреляет движене фона для добавления динамичности -->
